@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PIXEL WAR STI2D 
+    PIXEL WAR R&T
    ========================================================================== */
 
 // Variables Firebase
@@ -30,7 +30,7 @@ const CONFIG = {
     CHAT_COOLDOWN_MS: 10000, // Cooldown pour le chat (10 secondes)
     CLIENT_VERSION: "V1.6.3",
     DOUBLE_CLICK_THRESHOLD: 300,
-    ADMIN_USER: "noeb",
+    ADMIN_USER: "noe",
     
     // Temps d'inactivité (en millisecondes)
     INACTIVITY_TAB_TIMEOUT: 30000, // 30 secondes pour onglet inactif/changement d'onglet
@@ -77,8 +77,8 @@ const CONFIG = {
         '#FFB6C1', '#FF4757'
     ],
     FACTIONS: {
-        1: { name: 'TSTI1', color: '#00d2ff', cssClass: 'tsti1' },
-        2: { name: 'TSTI2', color: '#ff2a6d', cssClass: 'tsti2' }
+        1: { name: 'A-B', color: '#00d2ff', cssClass: 'tsti1' },
+        2: { name: 'C-D', color: '#ff2a6d', cssClass: 'tsti2' }
     }
 };
 
@@ -2336,7 +2336,10 @@ function setupAdminListeners() {
             document.getElementById('admin-new-name').value = '';
             showToast(`Ajouté: ${prettyName(nameNorm)}`, "success");
             await fetchWhitelist();
-        } catch (e) { showToast("Erreur ajout", "error"); }
+        } catch (e) {
+            console.error('Erreur ajout whitelist:', e);
+            showToast(`Erreur ajout: ${e.code || e.message || 'permission refusée'}`, "error");
+        }
     };
 
     const publishBtn = document.getElementById('btn-admin-publish-announcement');
@@ -3353,12 +3356,12 @@ function renderScoreboard() {
     headerDiv.innerHTML = `
         <div class="faction-count-item tsti1">
             <span class="faction-count-number">${factionCounts[1]}</span>
-            <span class="faction-count-label">TSTI1</span>
+            <span class="faction-count-label">A-B</span>
         </div>
         <div class="faction-vs">VS</div>
         <div class="faction-count-item tsti2">
             <span class="faction-count-number">${factionCounts[2]}</span>
-            <span class="faction-count-label">TSTI2</span>
+            <span class="faction-count-label">C-D</span>
         </div>
     `;
     listContainer.appendChild(headerDiv);

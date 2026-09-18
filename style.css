@@ -121,7 +121,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.badge-sti2d {
+.badge-rt {
     font-size: 0.7rem; letter-spacing: 4px; color: var(--text-secondary);
     text-transform: uppercase; border-bottom: 1px solid var(--text-secondary);
     padding-bottom: 5px; display: inline-block; margin-bottom: 30px;
@@ -521,7 +521,7 @@ canvas { image-rendering: pixelated; /* Crucial pour le look pixel art net */ }
 @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 /* =========================================
-   STYLE.CSS - PIXEL WAR STI2D
+    STYLE.CSS - PIXEL WAR R&T
    Version: 3.0 (Fixed UI & Hover)
    ========================================= */
 
@@ -610,7 +610,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-.badge-sti2d {
+.badge-rt {
     font-size: 0.7rem; letter-spacing: 4px; color: var(--text-secondary);
     text-transform: uppercase; border-bottom: 1px solid var(--text-secondary);
     margin-bottom: 30px; display: inline-block;
@@ -3245,7 +3245,7 @@ canvas { image-rendering: pixelated; }
         font-size: 1.4rem;
     }
     
-    .badge-sti2d {
+    .badge-rt {
         font-size: 0.6rem;
         margin-bottom: 20px;
     }
