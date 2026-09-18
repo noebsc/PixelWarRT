@@ -28,7 +28,7 @@ const CONFIG = {
     PIXEL_SCALE: 20,
     COOLDOWN_MS: 60000, // Cooldown pour placer les pixels (60 secondes)
     CHAT_COOLDOWN_MS: 10000, // Cooldown pour le chat (10 secondes)
-    CLIENT_VERSION: "V1.6.3",
+    CLIENT_VERSION: "V2.0.1",
     DOUBLE_CLICK_THRESHOLD: 300,
     ADMIN_USER: "noe",
     
